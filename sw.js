@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    if (event.request.url.endsWith('.onnx')) {
+    if (event.request.url.endsWith('.onnx') || event.request.url.endsWith('tokenizer.json')) {
         event.respondWith(
             caches.match(event.request).then((response) => {
                 if (response) {
