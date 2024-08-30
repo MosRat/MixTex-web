@@ -19,13 +19,13 @@ export default defineConfig({
   ],
   server: {
     headers: {
-      'Service-Worker-Allowed': '/'
+      'Service-Worker-Allowed': '/',
     }
   },
-  assetsInclude: ['**/*.onnx'],
+  assetsInclude: ['**/*.onnx','**/*.svg'],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
 })
